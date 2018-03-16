@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
 <!-- Includi tutto il necessario (font, icone, ...) -->
 <meta charset="UTF-8">
@@ -18,7 +20,7 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("http://sezioneb.altervista.org/LeoLeo/Z.png");
+    background-image: url("{% static "images/Z-nosign.png" %}");
     min-height: 100%;
 }
 .w3-bar .w3-button {
@@ -71,8 +73,8 @@ body, html {
   </div>
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <a href="INSERIRE LINK FACEBOOK"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="INSERIRE LINK INSTAGRAM"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="INSERIRE LINK YOUTUBE"><i class="fa fa-youtube w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/_zebsta/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.youtube.com/channel/UC-vUxy6NBrXY2AKBiYdljyA" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
   </div>
 </header>
 
@@ -106,53 +108,41 @@ body, html {
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="http://www.sezioneb.altervista.org/LeoLeo/Leo.jpg" alt="Leo" style="width:100%">
+        <img src="{% static "images/Leo.jpg" %}" alt="Leo" style="width:100%">
         <div class="w3-container">
           <h3>Leonardo Mantovani</h3>
-          <p class="w3-opacity">Founder</p>
+          <p class="w3-opacity">The Founder</p>
           <p>The mind at the head of the team. He loves computer and all the art which is made whith them.</p>
-          <!--
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-          -->
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="http://www.sezioneb.altervista.org/LeoLeo/Pietro.JPG" alt="Pietro" style="width:100%">
+        <img src="{% static "images/Pietro.JPG" %}" alt="Pietro" style="width:100%">
         <div class="w3-container">
           <h3>Pietro Furlan</h3>
           <p class="w3-opacity">The Coder</p>
           <p>This Boy and his ability with coding can make things that people can only imagine.</p>
-          <!--
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-          -->
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="http://www.sezioneb.altervista.org/LeoLeo/Davide.jpg" alt="Davide" style="width:100%">
+        <img src="{% static "images/Davide.jpg" %}" alt="Davide" style="width:100%">
         <div class="w3-container">
           <h3>Davide Nadin</h3>
           <p class="w3-opacity">The Designer</p>
           <p>He will delight you with his works which mix art, creativity and passion.</p>
-          <!--
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-          -->
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="http://www.sezioneb.altervista.org/LeoLeo/XXX.jpg" alt="XXX" style="width:100%">
+        <img src="{% static "images/XXX.jpg" %}" alt="XXX" style="width:100%">
         <div class="w3-container">
           <h3>XXX</h3>
           <p class="w3-opacity">The Missing Piece</p>
-          <p>The 4th Member of the team, He/She might be you!</p>
-          <!--
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-          -->
+          <p>The 4th Member of the team, He/She might be you: let's contact us if you're interested!</p>
         </div>
       </div>
     </div>
@@ -188,20 +178,25 @@ body, html {
 
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l3 m6">
-      <img src="/w3images/Z.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Z Background">
+      <img src="{% static "images/Z.png" %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Z Background">
     </div>
     <div class="w3-col l3 m6">
-      <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+      <img src="{% static "images/L.png" %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="L Background">
     </div>
     <div class="w3-col l3 m6">
-      <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+      <img src="{% static "images/Youtube.png" %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Youtube Background">
     </div>
     <div class="w3-col l3 m6">
-      <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+      <img src="{% static "images/IZebstaOfficial.png" %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Cover for Youtube">
     </div>
   </div>
 
-  <div class="w3-row-padding w3-section">
+  <div class="w3w3-row-padding w3-section">
+    <center>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8Jy1tydlamI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </center>
+  </div>
+  <!-- <div class="w3-row-padding w3-section">
     <div class="w3-col l3 m6">
       <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
     </div>
@@ -215,7 +210,7 @@ body, html {
       <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Modello per le immagini ingrandite quando cliccate -->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -288,9 +283,9 @@ body, html {
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <a href="INSERIRE LINK FACEBOOK"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="INSERIRE LINK INSTAGRAM"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="INSERIRE LINK YOUTUBE"><i class="fa fa-youtube w3-hover-opacity"></i></a>
+    <a href="INSERIRE LINK FACEBOOK" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/_zebsta/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.youtube.com/channel/UC-vUxy6NBrXY2AKBiYdljyA" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
   </div>
   <p>A Zebsta Production</p>
 </footer>
