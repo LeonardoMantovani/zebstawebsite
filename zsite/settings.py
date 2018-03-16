@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
@@ -20,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9&sxu1p-5h8((z@kg$goa!1y#%dggr7g(u9j*2(3_u$6fnk(h-'
+SECRET_KEY = '7)xq#a-e92#=w$crk$olik@bfd^__^($7@ua=pesq50z076nqv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'zapp',
+    'zapp' #DICIAMO A DJANGO DI USARE ANCHE LA NOSTRA APP blog
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,7 +87,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Rome'
+TIME_ZONE = 'Europe/Rome' #IMPOSTIAMO IL NOSTRO FUSO ORARIO
 
 USE_I18N = True
 
@@ -101,4 +100,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #IMPOSTIAMO UNA CARTELLA PER I FILE STATICI
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'testing@example.com'
